@@ -1,4 +1,5 @@
 # Srophé Application
+[![Build Status](https://github.com/srophe/srophe/actions/workflows/ci.yml/badge.svg)](https://github.com/srophe/srophe/actions/workflows/ci.yml)
 A TEI publishing application.
 
 The Srophé Application is an open source TEI publishing framework. Originally developed as a digital publication platform for 
