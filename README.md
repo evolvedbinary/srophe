@@ -15,7 +15,7 @@ Syriaca.org [http://syriaca.org/] the Srophé software has been generalize for u
 * Multi-format publishing: HTML, TEI, geoJSON, KML, JSON-LD, RDF/XML, RDF/TTL, Plain text
 
 ## Requirements 
-The Srophé Application runs on eXist-db v3.5.0 and up. 
+The Srophé Application runs on eXist-db v6.0.0 and up.
 
 In order to use the git-sync feature 
 (syncing your online website with your github repository) you will need to install the eXist-db EXPath Cryptographic Module Implementation [http://exist-db.org/exist/apps/public-repo/packages/expath-crypto-exist-lib.html]. 
