@@ -3,4 +3,8 @@
   <title>The Srophé web application</title>
   <dependency processor="http://exist-db.org" semver-min="6.0.0"/>
   <dependency package="http://exist-db.org/html-templating" semver-min="1.0.2"/>
+  <dependency package="http://exist-db.org/lib/githubxq" semver-min="1.0.0"/>
+  <dependency package="http://expath.org/ns/crypto" version="6.0.1"/>
+  <dependency package="http://exist-db.org/xquery/sparql" version="0.1-SNAPSHOT"/>
+  <dependency package="http://www.functx.coml" version="1.0.1"/>
 </package>
