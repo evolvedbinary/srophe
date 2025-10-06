@@ -45,3 +45,37 @@ Learn how to customize the application.
 
 ### Developing this Code Base
 You can run the integration tests by executing `./mvnw clean package -Pintegration-test`.
+
+#### Docker Image
+The Srophe application can also be compiled into a Docker Image where its EXPath Package is already deployed to Elemental.
+
+If you would like to build the Docker Image, you simply need to make sure you have Docker installed,
+and then include the build argument `-Pdocker`, for example:
+
+##### macOS / Linux / Unix Platforms
+Run the following from a Terminal/Shell:
+
+```shell
+./mvnw -Pdocker clean package
+```
+
+##### Microsoft Windows Platforms
+Run the following from a Command Prompt:
+```cmd
+mvnw.cmd -Pdocker clean package
+```
+
+#### Running Srophe with Docker
+You should first create a Docker Volume to hold your Elemental database files. You need do this only once:
+```shell
+docker volume create srophe-database
+```
+
+Once you have built (or obtained) the Docker Image, you can run Srophe in Docker like so:
+
+```shell
+docker run -it -p 8080:8080 --mount type=volume,src=srophe-database,dst=/elemental/data srophe/srophe:latest
+```
+
+Srophe will then be available in your web-browser at `http://localhost:8080/exist/apps/srophe/index.html`
+**NOTE**: The first time you use the Docker Image, you will need to deploy data for Srophe to use!
