@@ -154,6 +154,40 @@
                 </executions>
             </plugin>
             <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>xml-maven-plugin</artifactId>
+                <version>1.1.0</version>
+                <executions>
+                    <execution>
+                        <id>validate-xml</id>
+                        <phase>process-resources</phase>
+                        <goals>
+                            <goal>validate</goal>
+                        </goals>
+                        <configuration>
+                            <validationSets>
+                                <validationSet>
+                                    <dir>src/main/xar-resources</dir>
+                                    <includes>
+                                        <include>**/*.html</include>
+                                        <include>**/*.xml</include>
+                                        <include>**/*.xconf</include>
+                                        <include>**/*.odd</include>
+                                    </includes>
+                                </validationSet>
+                            </validationSets>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <validationSets>
+                        <validationSet>
+                            <dir>src/main/xml</dir>
+                        </validationSet>
+                    </validationSets>
+                </configuration>
+            </plugin>
+            <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <executions>

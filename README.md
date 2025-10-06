@@ -35,10 +35,13 @@ The Srophé Application depends on a unique identifier, for Syriaca.org uses `te
 It is also possible to use the document uri, changes would have to made in repo-config.xml and in controller.xql to enable use of the document uri rather then the tei:idno. 
 
 ### Deploy data and application
-In the root directory of each of your new repositories run '`./mvnw`' (or `mvnw.cmd` if you are on Windows) to build the application. 
+In the root directory of each of your new repositories run `./mvnw clean package` (or `mvnw.cmd` if you are on Windows) to build the application. 
 A new `srophe-3.1.0-SNAPSHOT.xar` file will be built and saved in `target/`. You can install these applications via the Elemental (or eXist-db) dashboard [http://localhost:8080/exist/apps/dashboard/index.html] using the Package Manager. 
 
 Once deployed the application should show up as 'The Srophé web application' on your dashboard. 
 Click on the icon to be taken to the app. 
 
-Learn how to customize the application. 
+Learn how to customize the application.
+
+### Developing this Code Base
+You can run the integration tests by executing `./mvnw clean package -Pintegration-test`.
